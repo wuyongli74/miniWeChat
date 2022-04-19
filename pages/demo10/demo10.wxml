@@ -1,0 +1,31 @@
+<!-- 1.父组件(页面)向子组件传递数据，通过标签属性的方式来传递
+      1.在子组件中接收
+      2.把这个数据当成是data中的数据直接用即可
+     2.子向父传递数据 通过事件的方式传递
+      1.在子组件的标签上加入一个自定义事件 -->
+<Tabs tabs="{{tabs}}" binditemChange="hanldeItemChange">
+<block wx:if="{{tabs[0].isActive}}">0</block>
+<block wx:elif="{{tabs[1].isActive}}">1</block>
+<block wx:elif="{{tabs[2].isActive}}">2</block>
+<block wx:else>3</block>
+</Tabs>
+
+<!-- 模板中包裹的内容，在没有使用前，是不会进行任何的渲染的 -->
+<!-- <template name="contentItem">
+      <button size="mini">{{btnText}}</button>
+      <view>{{content}}</view>
+</template> -->
+
+<!-- 关于wxml的导入有两种方式：
+      1.import导入
+      (1).主要是导入template
+      (2).特点：不能进行递归导入
+      2.include引入：
+      (1).将公共的wxml中的组件抽到一个文件中
+      (2).特点：不能导入template/wxs，可以进行递归导入-->
+
+<!-- wxml相对路径/绝对路径都可以引入 -->
+<!-- <import src="/template/template"/>  -->
+<import src="../../template/template"/>
+<!-- 使用状态 -->
+<template is="contentItem" data="{{btnText:'按钮',content:'嘿嘿嘿'}}"/>

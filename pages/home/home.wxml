@@ -1,0 +1,16 @@
+<view>网络请求事例与弹窗</view>
+
+<!-- 1.Toast -->
+<button bindtap="handleShowToast" size="mini">Toast</button>
+
+<!-- 2.Modal -->
+<button bindtap="handleShowModal" size="mini">Modal</button>
+
+<!-- 3.Loading -->
+<button bindtap="handleShowLoading" size="mini">Loading</button>
+
+<!-- 4.actionSheet -->
+<button bindtap="handleShowAction" size="mini">actionSheet</button>
+
+<!-- 5.分享按钮 -->
+<button open-type="share" size="mini">分享</button>

@@ -1,0 +1,3 @@
+<view>头部</view>
+<slot></slot>
+<view>尾部</view>

@@ -1,0 +1,104 @@
+<view>---------------用法1--------------</view>
+<!-- 字符串 -->
+<view>{{msg}}</view>
+<!-- 数字类型 -->
+<view>{{num}}</view>
+<!-- Boolean类型 -->
+<view>是否是伪娘:{{isGirl}}</view>
+<!-- object类型 -->
+<view>年龄：{{person.age}}</view>
+<view>身高：{{person.height}}</view>
+<view>体重：{{person.weight}}</view>
+<view>名字：{{person.name}}</view>
+<!-- 在标签的属性中使用 -->
+<view data-num="{{ num }}">自定义属性</view>
+<!-- 使用Boolean类型充当属性中使用
+    字符串和花括号之间一定不要存在空格，否则会导致识别失败 -->
+<view>
+    <checkbox checked="{{ isChecked }}"></checkbox>
+</view>
+<!-- 运算 =>表达式
+    1.可以在花括号中 加入 表达式 -- ‘语句’
+    2.表达式
+        指的是一些简单的运算 数字运算 字符串 拼接 逻辑运算
+        1.数字的加减
+        2.字符串拼接
+        3.三元表达式
+    3.语句
+      1.复杂的代码片段
+        ①.if else
+        ②.switch
+        ③.do while 
+        ④.for -->
+<view>{{1+1}}</view>
+<!-- 拼接 -->
+<view>{{'1'+'1'}}</view>
+<!-- 三元运算 -->
+<view>{{ 11%2===0? '偶数': '奇数'}}</view>
+<!-- 列表循环
+    1.wx:for="{{数组或者对象}}" wx:for-item="循环项的名称" wx:for-index="循环项的索引"
+    2.wx:key="唯一的值" 用来提高列表渲染的性能
+      1.wx:key 绑定一个普通的字符串的时候 那么这个字符串名称 肯定是循环数组中的对象的唯一属性
+      2.wx:key ="*this" 就表示你的数组 是一个普通的数组 *this 表示是循环项 
+      [1,2,3,44,5]
+      ["1","222","adddddf"]
+    3.当出现 数组的嵌套循环的时候，尤其注意 以下绑定的名称 不要重名
+      wx:for-item="item" wx:for-index="index"
+    4.默认情况下 我们不写
+      wx:for-item="item" wx:for-index="index"
+      小程序也会把 循环项的名称 和 索引的名称 item和index
+      只有一层循环的话（wx:for-item="item" wx:for-index="index"）可以省略 -->
+<view>
+    <view wx:for="{{ list }}" wx:for-item="item" wx:for-index="index" wx:key="id">
+        索引：{{index}}--值：{{item.name}}
+    </view>
+</view>
+<!-- 对象循环
+    1.wx:for="{{对象}}" wx:for-item="对象的值" wx:for-index="对象的属性"
+    2.循环对象的时候 最好把item和index的名称都修改一下 -->
+<view>
+    <view>对象循环</view>
+    <block wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="age" class="my_list">
+        属性：{{key}}
+        --
+        值：{{value}}
+    </block>
+</view>
+<!-- 条件渲染
+    1.wx:if="{{true/false}}"
+        1.if,else,if else
+          wx:if
+          wx:elif
+    2.hidden
+        1.在标签上直接加入属性hidden
+        2.hidden="{{true}}"
+    3.什么场景下用哪个
+        1.当标签不是频繁的切换显示 优先使用wx:if
+          直接把标签从页面结构给移除掉
+        2.当标签频繁的切换显示的时候 优先使用hidden
+          通过添加样式的方式来切换显示
+          hidden属性不要和样式display一起使用
+          -->
+<view>
+    <view>条件渲染</view>
+    <view wx:if="{{true}}">显示</view>
+    <view wx:if="{{false}}">隐藏</view>
+    <view wx:if="{{false}}">1</view>
+    <view wx:elif="{{false}}">2</view>
+    <view wx:else>3</view>
+    <view>-----------</view>
+    <view hidden>hidden1</view>
+    <view hidden="{{false}}">hidden2</view>
+    <view>-----------</view>
+    <view wx:if="{{false}}">wx:if</view>
+    <view hidden style="display: flex;">hidden</view>
+</view>
+
+<view>---------------用法2--------------</view>
+<!-- 1.hover-class: 当用户按下组件时，显示的样式 -->
+<view hover-class="hover-view" hover-stay-time="{{0}}" class="box1">box1</view>
+
+<!-- 2.hover-stop-propagation: 阻止祖先组件的点击态 -->
+<view class="box2" hover-class="box2-hover">
+    <view hover-class="hover-view" hover-stay-time="{{0}}" class="box1" hover-stop-propagation="{{true}}">box1</view>
+</view>

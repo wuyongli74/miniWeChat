@@ -1,0 +1,65 @@
+{
+    "pages": [
+        "pages/navigator/navigator",
+        "pages/home/home",
+        "pages/search/search",
+        "pages/demo5/demo5",
+        "pages/mine/mine",
+        "pages/index/index",
+        "pages/wxs/wxs",
+        "pages/demo10/demo10",
+        "pages/demo4/demo4",
+        "pages/scroll/scroll",
+        "pages/input/input",
+        "pages/image/image",
+        "pages/view/view",
+        "pages/rpx/rpx",
+        "pages/button/button",
+        "pages/demo9/demo9",
+       
+        "pages/demo6/demo6",
+        "pages/logs/logs",
+        "template/template"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTitleText": "我的应用",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icon/_home.png",
+                "selectedIconPath": "icon/home.png"
+            },
+            {
+                "pagePath": "pages/image/image",
+                "text": "图片",
+                "iconPath": "icon/_img.png",
+                "selectedIconPath": "icon/img.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "图片",
+                "iconPath": "icon/_my.png",
+                "selectedIconPath": "icon/my.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "图片",
+                "iconPath": "icon/_search.png",
+                "selectedIconPath": "icon/search.png"
+            }
+        ],
+        "color": "#999",
+        "selectedColor": "#900368",
+        "backgroundColor": "#eeefff"
+    },
+    "usingComponents": {
+        "my-cpn": "/components/my-cpn/my-cpn"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

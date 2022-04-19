@@ -1,0 +1,12 @@
+/* 1.定义less变量 */
+text {
+  /* 2.使用变量 */
+  color: rgba(185, 155, 70, 0.432);
+}
+view .vie1 {
+  color: rebeccapurple;
+}
+/* 导入 */
+view {
+  color: green;
+}

@@ -1,0 +1,4 @@
+/* components/cpn1/cpn1.wxss */
+.box1{
+    background-color: gold;
+}

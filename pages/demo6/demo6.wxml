@@ -1,0 +1,50 @@
+<!-- 1.长按复制user-select
+     2.对文本内容进行解码decode -->
+<text user-select decode>text&nbsp;123 &lt;</text>
+<!-- image 图片标签
+        1.src 指定要加载的图片路径
+          图片存在的默认宽度和高度 320*240 原图大小是：200*100
+        2.mode 决定图片内容 如何和图片标签宽高做适配
+            1.scaleToFill  默认值  缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
+            2.aspectFit           缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来  页面轮播图常用
+            3.aspectFill          缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。
+            4.widtFhix	          缩放模式，宽度不变，高度自动变化，保持原图宽高比不变
+            5.bottom	          裁剪模式，不缩放图片，只显示图片的底部区
+        3.小程序当中的图片 直接就支持懒加载 lazy-load 
+          lazy-load 	图片懒加载，在即将进入一定范围（上下三屏）时才开始加载 -->
+<!-- <image src="https://i.ibb.co/bN4MQ6W/glgs.jpg" mode="bottom" /> -->
+<!-- 1.轮播图外层容器 swiper
+     2.每个轮播项 swiper-item
+     3.swiper标签 存在默认样式
+        1.width  100%
+        2.height 150px   image 存在默认宽高320*240
+        3.swiper 高度无法实现由内容撑开
+     4.先找出原图的宽高 等比例给swiper定宽高
+        原图宽高 1125*352px
+        swiper 宽度 / swiper 高度 = 原图的宽度 / 原图的高度
+        swiper 高度 = swiper 宽度 * 原图的高度 / 原图的宽度
+        height: 100vw * 352 / 1125
+     5.autoplay--自动轮播
+     6.circular--衔接轮播
+     7.interval--切换时间
+     8.indicator-dots 显示 指示器 分页器 索引器
+     9.indicator-color 指示点的颜色
+     10 indicator-action-color 选中时指示器的颜色 -->
+<swiper autoplay interval="1000" circular indicator-dots indicator-color="#0094ff" indicator-active-color="#ff0094">
+    <swiper-item>
+        <image mode="widtFhix" src="https://img2.woyaogexing.com/2018/10/24/5a59fce53e54cd9c!400x400_big.jpg" />
+    </swiper-item>
+    <swiper-item>
+        <image mode="widtFhix" src="https://img2.woyaogexing.com/2018/10/24/87c9b50f66de7155!400x400_big.jpg" />
+    </swiper-item>
+    <swiper-item>
+        <image mode="widtFhix" src="https://img2.woyaogexing.com/2018/10/24/86dcf3e6bc2d30b4!400x400_big.jpg" />
+    </swiper-item>
+</swiper>
+
+<!-- 1.跳转过程中数据的传递 -->
+<navigator url="/pages/demo9/demo9">跳转到详情页</navigator>
+
+<navigator open-type="navigateBack">返回</navigator>
+
+<button size="mini" bindtap="handleBackHome">返回</button>

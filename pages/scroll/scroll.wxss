@@ -1,0 +1,24 @@
+.container1 {
+    background: rgba(236, 155, 32, 0.322);
+    white-space: nowrap;
+}
+
+.item1 {
+    width: 100px;
+    height: 100px;
+    background: rgb(247, 133, 133);
+    margin: 10px;
+    display: inline-block;
+}
+
+.container2 {
+    height: 200px;
+    margin-top: 10px;
+    background: rgba(250, 208, 116, 0.795); 
+}
+
+.item2 { 
+    height: 100px;
+    background: rgb(183, 167, 238);
+    margin: 10px; 
+}

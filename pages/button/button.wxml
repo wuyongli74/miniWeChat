@@ -1,0 +1,44 @@
+<!-- button 按钮 -->
+<button>默认按钮</button>
+<!-- 1.size 大小外观的属性: default 默认大小, mini 小尺寸 -->
+<button size="mini">mini</button>
+<!-- 2.type 用来控制按钮颜色: default 灰色, primary 绿色,warn 红色 -->
+<button size="mini" type="default">default</button>
+<button size="mini" type="primary">primary</button>
+<button size="mini" type="warn">warn</button>
+<!-- 3.plain 按钮是否镂空，背景透明 -->
+<button size="mini" type="warn" plain>plain</button>
+<!-- 4.disable: 不可用 -->
+<button size="mini" disabled>disable</button>
+<!-- 5.loading -->
+<button size="mini" loading="{{isLoading}}">loading</button>
+<!-- 6.hover-class -->
+<button hover-class="pressed">hover-class</button>
+<!-- button
+  open-type:
+    1.contact	打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，
+    2.share	触发用户转发，使用前建议先阅读使用指引	不能分享到朋友圈
+    3.getPhoneNumber	获取用户手机号，可以从bindgetphonenumber回调中获取到用户信息，
+      1.绑定一个事件bindgetphonenumber
+      2.在事件的回调函数回调中，通过参数来获取参数
+      3.获取到的信息 已加密
+          需要用户自己搭建小程序的后台服务器，在后台服务器中进行解析手机号码，
+    4.getUserInfo	获取用户信息，可以从bindgetuserinfo回调中获取到用户信息 	
+      1.使用方法类似 获取用户手机号
+      2.可以直接获取 不存在加密的字段
+    5.launchApp	打开APP，可以通过app-parameter属性设定向APP传的参数具体说明
+      1.需要现在app中 通过app的某个链接 打开小程序
+      2.在小程序中再通过这个功能重新打开app
+      3.京东app和小程序可以演示
+    6.openSetting	打开授权设置页
+      1.授权页面只会用户曾经授权过的权限	
+    7.feedback	打开“意见反馈”页面，用户可提交反馈内容并上传日志，开发者可以登录小程序管理后台后进入左侧菜单“客服反馈”页面获取到反馈内容
+    8.chooseAvatar	获取用户头像，可以从bindchooseavatar回调中获取到头像信息 -->
+<button open-type="contact">contact</button>
+<button open-type="share">share</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">getPhoneNumber</button>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">getUserInfo</button>
+<button open-type="launchApp">launchApp</button>
+<button open-type="openSetting">openSetting</button>
+<button open-type="feedback">feedback</button>
+<button open-type="chooseAvatar">chooseAvatar</button>

@@ -1,0 +1,21 @@
+
+.box1{
+  width: 100px;
+  height: 100px;
+  background:tomato;
+}
+.hover-view{
+  background:violet;
+  font-size: 30px;
+}
+
+.box2{
+  width: 200px;
+  height: 200px;
+  background:rgb(120, 71, 255);
+  margin-top: 20rpx;
+}
+ 
+.box2-hover{
+  background: green;
+}

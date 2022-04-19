@@ -1,0 +1,6 @@
+/* pages/demo8/demo8.wxss */
+.pressed{
+    color: white;
+    background-color: red;
+    font-size: 30rpx;
+}

@@ -1,0 +1,17 @@
+/* pages/search/search.wxss */
+.title{
+    font-size: 50rpx;
+    font-weight: 700;
+    color: rgb(11, 125, 255);
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+.blue{
+    color: blue;
+}

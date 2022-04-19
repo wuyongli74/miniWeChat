@@ -1,0 +1,18 @@
+/* 1.定义less变量 */
+@color: rgba(185, 155, 70, 0.432);
+text {
+  /* 2.使用变量 */
+  color: @color;
+}
+
+view {
+  .vie1 {
+    color: rebeccapurple;
+  }
+}
+
+/* 导入 */
+@import '../../style/reset.less';
+view {
+  color: @themeColor;
+}

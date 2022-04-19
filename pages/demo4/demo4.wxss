@@ -1,0 +1,13 @@
+/* 
+1.引入的代码是通过@import来引入
+2.路径只能写相对路径
+*/
+@import "../../style/common.wxss";
+
+.box{
+    font-size: 30px;
+    font-weight: 600;
+}
+.content{
+    background: rgb(181, 129, 233);
+}
